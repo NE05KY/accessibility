@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Accessibility</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+<header class="caption">
+    <h1>Web Accessibility</h1>
+    <p>Alexey Alexeyev, Exadel Inc.</p>
+</header>
+
+<section class="slide" id="cover">
+    <h2>⠠⠁⠉⠉⠑⠎⠎⠊⠃⠊⠇⠊⠞⠽</h2>
+    <br>
+    <h2>
+        <span style="color:#000000">a</span><span style="color:#79418e">c</span><span
+            style="color:#7d4bff">c</span><span style="color:#f0427c">e</span><span style="color:#ba66c6">s</span><span
+            style="color:#00b0ff">s</span><span style="color:#010101">i</span><span style="color:#ba3f92">b</span><span
+            style="color:#2f1c91">i</span><span style="color:#ed447e">l</span><span style="color:#000000">i</span><span
+            style="color:#00b0ff">t</span><span style="color:#000000">y</span>
+    </h2>
+    <p>Brought to you by <a href="https://github.com/NE05KY/">Alexey Alexeyev</a></p>
+
+    <style>
+        #cover::after {
+            visibility: hidden;
+        }
+
+        #cover h2 {
+            font-family: Courier;
+            margin: 30px 0 0;
+            color: #000;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        #cover p {
+            margin: 10px 0 0;
+            text-align: center;
+            color: #000;
+            font-style: italic;
+            font-size: 20px;
+            top: 200px;
+            position: relative;
+        }
+
+        #cover p a {
+            color: #000;
+        }
+
+
+    </style>
+</section>
+
+<section class="slide" id="about">
+    <img src="pictures/avatar.jpg" alt="My photo" class="avatar">
+    <h2>Алексей Алексеев</h2>
+    <p class="iam">Front-end Developer at Exadel Inc.</p>
+
+    <ul>
+        <li><a href="twitter.com/NE05KY">TODO: @NE05KY</a></li>
+    </ul>
+
+    <style>
+        #about .avatar {
+            width: 365px;
+            height: 365px;
+            float: right;
+            border-radius: 50%;
+            margin-top: 12px;
+            margin-right: 5px;
+        }
+
+        #about h2 {
+            margin-top: 100px;
+        }
+
+        #about .iam {
+            margin-bottom: 15px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="what">
+    <h2>Веб-доступность</h2>
+
+    <figure>
+        <blockquote><p>Веб был спроектирован так, чтобы с ним мог работать любой человек, вне зависимости от его
+            аппаратного и
+            программного обеспечения, языка, культуры, физических и умственных способностей. Когда Веб удовлетворяет
+            всем
+            этим требованиям, то он становится доступным для людей с ограничениями слуха, подвижности, зрения и
+            когнитивных
+            способностей.</p></blockquote>
+        <figcaption>World Wide Web Consortium (W3C)</figcaption>
+    </figure>
+
+    <footer>What and Why?</footer>
+</section>
+
+<section class="slide" id="billion">
+    <h2 class="shout">1+ млрд</h2>
+
+    <footer>world's largest minority. 15% according to the World Health Organization</footer>
+</section>
+
+<section class="slide" id="why">
+    <h2>Почему это важно?</h2>
+
+    <ul>
+        <li>Более 1 миллиарда человек имеют ту или иную форму инвалидности</li>
+        <li class="next">70% случаев инвалидности незаметны</li>
+        <li class="next">22% населения Земли будет старше 60 лет к 2020 году</li>
+        <li class="next">Покупательная способность этой категории людей оценивается в 3 триллиона долларов</li>
+        <li class="next">Компании, продукты и сервисы которых не отвечают критериям доступности могут быть привлечены к
+            юридической ответственности
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="types-of-disabilities">
+    <h2>Виды инвалидности</h2>
+    <ul class="double">
+        <li>Слепота</li>
+        <li>Ухудшенное зрение</li>
+        <li>Дальтонизм</li>
+        <li>Глухота</li>
+        <li>Слепоглухота</li>
+        <li>Нарушения двигательных функций</li>
+        <li>Нарушения речевых функций</li>
+        <li>Когнитивные расстройства</li>
+        <li>Затруднения при чтении</li>
+        <li>Припадки</li>
+    </ul>
+</section>
+
+<section class="slide" id="wcag">
+    <h2>Web Content Accessibility Guidelines (WCAG)</h2>
+
+    <ul>
+        <li>WCAG 2.0 датируется 11 декабря 2008 года</li>
+        <li class="next">Определяет три уровня доступности (A, AA и AAA)</li>
+        <li class="next">Содержит 12 гайдлайнов разбитых на 4 группы:
+            <ol>
+                <li>Воспринимаемость</li>
+                <li>Управляемость</li>
+                <li>Понятность</li>
+                <li>Надежность</li>
+            </ol>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="howtohelp">
+    <h2>Ипользование веба людьми с ограниченными возможностями</h2>
+
+    <ul>
+        <li>Увеличение масштаба страницы</li>
+        <li class="next">Использование экранного диктора (Screen Reader)</li>
+        <li class="next">Навигация с помощью клавиатуры</li>
+        <li class="next">Отключение таблиц стилей</li>
+    </ul>
+
+    <footer>Последний пункт для людей с дислексией и дальтонизмом</footer>
+</section>
+
+<section class="slide" id="justdoit">
+    <h2 class="shout">Бесплатная Доступность</h2>
+</section>
+
+<section class="slide" id="lang">
+    <h2>TODO: Экранный диктор</h2>
+
+    <ul>
+        <li>&lt;html lang="ru"&gt;</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide" id="links">
+    <h2>TODO: Экранный диктор. Ссылки</h2>
+
+    <h2 class="shout"><a href="#links">☰</a></h2>
+    <br>
+    <pre>
+        <code>&lt;a href="#"&gt;☰&lt;&gt;</code>
+    </pre>
+</section>
+
+<section class="slide" id="aria">
+    <h2>TODO: Aria</h2>
+</section>
+
+
+<section class="slide" id="semantics">
+    <h2 class="shout">Семантика</h2>
+
+    <footer>Использование HTML-тегов по предназначению и логичная и последовательная иерархия</footer>
+</section>
+
+<section class="slide" id="divitis">
+    <h2 class="shout">Divitis</h2>
+</section>
+
+<section class="slide" id="divitis-desc">
+    <h2>Диватоз</h2>
+
+    <figure>
+        <blockquote>
+            <p>Выдуманное заболевание, для которого характерно использование только элементов
+                <mark>&lt;div&gt;</mark>
+                вместо семантически подходящих.
+            </p>
+        </blockquote>
+        <figcaption>Словарь терминов по фронтенду</figcaption>
+    </figure>
+</section>
+
+<section class="slide" id="html-elements">
+    <h2 class="shout">!DOCTYPE</h2>
+
+    <script>
+		var elements = [
+			"&lt;a>",
+			"&lt;abbr>",
+			"&lt;address>",
+			"&lt;area>",
+			"&lt;article>",
+			"&lt;aside>",
+			"&lt;audio>",
+			"&lt;b>",
+			"&lt;base>",
+			"&lt;bdi>",
+			"&lt;bdo>",
+			"&lt;blockquote>",
+			"&lt;body>",
+			"&lt;br>",
+			"&lt;button>",
+			"&lt;canvas>",
+			"&lt;caption>",
+			"&lt;cite>",
+			"&lt;code>",
+			"&lt;col>",
+			"&lt;colgroup>",
+			"&lt;command>",
+			"&lt;datalist>",
+			"&lt;dd>",
+			"&lt;del>",
+			"&lt;details>",
+			"&lt;dfn>",
+			"&lt;div>",
+			"&lt;dl>",
+			"&lt;dt>",
+			"&lt;em>",
+			"&lt;embed>",
+			"&lt;fieldset>",
+			"&lt;figcaption>",
+			"&lt;figure>",
+			"&lt;footer>",
+			"&lt;form>",
+			"&lt;h1>",
+			"&lt;h6>",
+			"&lt;head>",
+			"&lt;header>",
+			"&lt;hgroup>",
+			"&lt;hr>",
+			"&lt;html>",
+			"&lt;i>",
+			"&lt;iframe>",
+			"&lt;img>",
+			"&lt;input>",
+			"&lt;ins>",
+			"&lt;kbd>",
+			"&lt;keygen>",
+			"&lt;label>",
+			"&lt;legend>",
+			"&lt;li>",
+			"&lt;link>",
+			"&lt;map>",
+			"&lt;mark>",
+			"&lt;menu>",
+			"&lt;meta>",
+			"&lt;meter>",
+			"&lt;nav>",
+			"&lt;noscript>",
+			"&lt;object>",
+			"&lt;ol>",
+			"&lt;optgroup>",
+			"&lt;option>",
+			"&lt;output>",
+			"&lt;p>",
+			"&lt;param>",
+			"&lt;pre>",
+			"&lt;progress>",
+			"&lt;q>",
+			"&lt;rp>",
+			"&lt;rt>",
+			"&lt;ruby>",
+			"&lt;s>",
+			"&lt;samp>",
+			"&lt;script>",
+			"&lt;section>",
+			"&lt;select>",
+			"&lt;small>",
+			"&lt;source>",
+			"&lt;span>",
+			"&lt;strong>",
+			"&lt;style>",
+			"&lt;sub>",
+			"&lt;summary>",
+			"&lt;sup>",
+			"&lt;table>",
+			"&lt;tbody>",
+			"&lt;td>",
+			"&lt;textarea>",
+			"&lt;tfoot>",
+			"&lt;th>",
+			"&lt;thead>",
+			"&lt;time>",
+			"&lt;title>",
+			"&lt;tr>",
+			"&lt;track>",
+			"&lt;u>",
+			"&lt;ul>",
+			"&lt;var>",
+			"&lt;video>",
+			"&lt;wbr>"
+		]
+			, counter = 0;
+		function changeTitle()
+		{
+			setTimeout(function ()
+			{
+				document.querySelector("#html-elements h2").innerHTML = elements[parseInt(Math.random() * elements.length)];
+				changeTitle();
+			}, 200);
+		}
+		changeTitle();
+    </script>
+</section>
+
+<section class="slide" id="btn">
+    <h2>Диватоз и семантика</h2>
+
+    <pre>
+        <code>&lt;div class="btn"&gt;Click me!&lt;/div&gt;</code>
+        <code class="next">&lt;div class="btn" <mark>role="button"</mark>&gt;Click me!&lt;/div&gt;</code>
+        <code class="next">&lt;div class="btn" <mark>role="button" tabindex="0"</mark>&gt;Click me!&lt;/div&gt;</code>
+        <code class="next">&lt;div class="btn" <mark>role="button" tabindex="0"</mark>
+            <mark class="important">onKeyPress="handleBtnKeyPress()"</mark>&gt;Click me!&lt;/div&gt;</code>
+        <pre>
+        </pre>
+
+        <code class="next">&lt;button&gt;Click me!&lt;/button&gt;</code>
+    </pre>
+</section>
+
+<section class="slide" id="controls">
+    <h2 class="shout">Custom Controls<br> vs. <br> Native Controls</h2>
+</section>
+
+<section class="slide" id="dont">
+    <h2 class="shout">That funny control you’re thinking of using... don’t.</h2>
+</section>
+
+<section class="slide" id="phone-control">
+    <img src="pictures/phone-control.gif" alt="" class="cover">
+</section>
+
+<section class="slide" id="">
+    <h2>TODO: Custom Controls vs. Native Controls</h2>
+
+</section>
+
+<section class="slide" id="WWE">
+    <img class="cover" src="pictures/WWE.gif" alt="Screenshot of Worst Web Site Ever">
+</section>
+
+<section class="slide" id="contrast">
+    <h2 class="shout">Контраст</h2>
+</section>
+
+<section class="slide" id="tools">
+    <h2>Инструменты проверки и автоматизации</h2>
+
+    <ul>
+        <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb/related">Accessibility
+                Developer Tools (for Chrome)</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd">Axe Chrome
+            extension</a></li>
+        <li><a href="https://github.com/dequelabs/axe-core">Axe-Core for CIT</a></li>
+    </ul>
+</section>
+
+<section class="slide" id="audit">
+    <h2>Аудит доступности</h2>
+
+    <ul>
+        <li>Навигация с использованием клавиатуры</li>
+        <ul>
+            <li>Проверка последовательности переходов и скрытых элементов</li>
+        </ul>
+        <li>Навигация с использование экранных дикторов</li>
+        <ul>
+            <li>Проверка всех нетекстовых элементов</li>
+            <li>Проверка функциональности контролов и управляющих элементов</li>
+            <li>Проверка модальных диалогов и всплывающих элементов</li>
+        </ul>
+        <li>Проверка структуры страницы и семантики</li>
+        <li>Проверка цветов и контрастности</li>
+    </ul>
+</section>
+
+<section class="slide" id="whatsnext">
+    <h2>Что дальше?</h2>
+
+    <ul>
+        <li><a href="https://soundcloud.com/web-standards">Подкаст Веб-стандарты</a></li>
+        <li><a href="https://youtube.com/watch?v=88tfx3jLV_M&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">A11ycasts</a></li>
+        <li><a href="https://webaccessibility.withgoogle.com/course">Introduction to Web Accessibility - Course by
+            Google</a>
+        </li>
+        <li><a href="https://www.udacity.com/course/web-accessibility--ud891">Web Accessibility - Udacity Course</a>
+        </li>
+        <li><a href="https://a11yproject.com">a11yproject.com</a></li>
+    </ul>
+</section>
+
+<section class="slide" id="thanx">
+    <h2>Accessibility</h2>
+    <p>Алексеев Алексей, Exadel Inc.</p>
+
+    <ul>
+        <li><a href="https://twitter.com/NE05KY">@NE05KY</a></li>
+    </ul>
+
+    <p>Презентация: <a href="">TODO: link</a></p>
+</section>
+
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+</body>
+</html>
