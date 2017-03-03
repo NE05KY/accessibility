@@ -14,8 +14,7 @@
 </header>
 
 <section class="slide" id="cover">
-    <h2>⠠⠁⠉⠉⠑⠎⠎⠊⠃⠊⠇⠊⠞⠽</h2>
-    <br>
+    <h2><img src="pictures/logo.PNG" alt="logo" style="width: 600px;"></h2>
     <h2>
         <span style="color:#000000">a</span><span style="color:#79418e">c</span><span
             style="color:#7d4bff">c</span><span style="color:#f0427c">e</span><span style="color:#ba66c6">s</span><span
@@ -51,22 +50,18 @@
         #cover p a {
             color: #000;
         }
-
-
     </style>
 </section>
 
-<section class="slide" id="about">
+<section class="slide" id="iam">
     <img src="pictures/avatar.jpg" alt="My photo" class="avatar">
     <h2>Алексей Алексеев</h2>
-    <p class="iam">Front-end Developer at Exadel Inc.</p>
+    <p class="position">Front-end Developer at Exadel Inc.</p>
 
-    <ul>
-        <li><a href="twitter.com/NE05KY">TODO: @NE05KY</a></li>
-    </ul>
+    <p><a href="twitter.com/NE05KY">@NE05KY</a></p>
 
     <style>
-        #about .avatar {
+        #iam .avatar {
             width: 365px;
             height: 365px;
             float: right;
@@ -75,11 +70,11 @@
             margin-right: 5px;
         }
 
-        #about h2 {
+        #iam h2 {
             margin-top: 100px;
         }
 
-        #about .iam {
+        #iam .position {
             margin-bottom: 15px;
         }
     </style>
@@ -156,7 +151,7 @@
 </section>
 
 <section class="slide" id="howtohelp">
-    <h2>Ипользование веба людьми с ограниченными возможностями</h2>
+    <h2>Ипользование интернета людьми с ограниченными возможностями</h2>
 
     <ul>
         <li>Увеличение масштаба страницы</li>
@@ -168,33 +163,70 @@
     <footer>Последний пункт для людей с дислексией и дальтонизмом</footer>
 </section>
 
-<section class="slide" id="justdoit">
+<section class="slide" id="a11y-for-free">
     <h2 class="shout">Бесплатная Доступность</h2>
 </section>
 
-<section class="slide" id="lang">
-    <h2>TODO: Экранный диктор</h2>
+<section class="slide" id="screen-readers">
+    <h2>Экранный диктор</h2>
 
     <ul>
-        <li>&lt;html lang="ru"&gt;</li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><code>&lt;title&gt;, lang="ru"</code></li>
+        <li class="next">Текстовая альтернатива для нетекстовых элементов (медиа-контент)</li>
+        <li class="next">Роли интерактивных элементов (<code>HTML Role Attribute</code>)</li>
+        <li class="next"><code>ARIA-атрибуты</code></li>
     </ul>
+
+    <img src="pictures/screen-readers.png" alt="screen readers logo" style="width: 100%;">
 </section>
 
 <section class="slide" id="links">
-    <h2>TODO: Экранный диктор. Ссылки</h2>
+    <h2>Экранный диктор. Ссылки</h2>
 
-    <h2 class="shout"><a href="#links">☰</a></h2>
+
+    <h2 class="hamburger">☰</h2>
     <br>
     <pre>
-        <code>&lt;a href="#"&gt;☰&lt;&gt;</code>
+        <code class="next">&lt;a href="#"&gt;☰&lt;&gt;</code>
+        <code class="next">&lt;a href="#" <mark>aria-label="Open navigation"</mark>&gt;☰&lt;&gt;</code>
     </pre>
+
+    <style>
+        #links .hamburger {
+            text-align: center;
+            font-size: 200px;
+            margin-bottom: 0px;
+        }
+    </style>
 </section>
 
 <section class="slide" id="aria">
-    <h2>TODO: Aria</h2>
+    <h2>Accessible Rich Internet Applications (ARIA)</h2>
+
+    <ul>
+        <li>Стандарт WAI-ARIA 1.0 (20 марта 2014)</li>
+        <li class="next">Набор атрибутов позволяющих модифицировать дерево доступности</li>
+        <li class="next">Предоставляет расширенную информацию экранным дикторам</li>
+        <li class="next">Добавляет семантику, подписи и описания</li>
+        <li class="next">Описывает отношения между элементами</li>
+        <li class="next">Улучшает навигацию по странице и доступность форм</li>
+    </ul>
+</section>
+
+<section class="slide" id="aria-in-action">
+    <h2>ARIA в действии</h2>
+
+    <ul>
+        <li>Описание элемента<br>
+            <code>&lt;label id="address">Адрес&lt;/label><br>
+                &lt;input type="text" aria-labelledby="address"></code>
+        </li>
+        <li>Роль элемента<br>
+            <code>&lt;div role="alert">Что-то не так&lt;/div></code>
+        </li>
+        <li>Состояние элемента<br>
+            <code>&lt;li role="menuitemcheckbox" aria-checked="true">&lt;/li></code></li>
+    </ul>
 </section>
 
 
@@ -220,6 +252,11 @@
         </blockquote>
         <figcaption>Словарь терминов по фронтенду</figcaption>
     </figure>
+</section>
+
+<section class="slide" id="vk">
+    <h2 class="shout"><img src="pictures/vk.png" alt="Vkontakte logo" style="width: 250px;"></h2>
+    <img src="pictures/divitis.png" alt="vk markup screenshot" class="cover">
 </section>
 
 <section class="slide" id="html-elements">
@@ -365,17 +402,45 @@
     <h2 class="shout">Custom Controls<br> vs. <br> Native Controls</h2>
 </section>
 
-<section class="slide" id="dont">
-    <h2 class="shout">That funny control you’re thinking of using... don’t.</h2>
-</section>
-
 <section class="slide" id="phone-control">
-    <img src="pictures/phone-control.gif" alt="" class="cover">
+    <h2>That funny control you’re thinking of using... don’t.</h2>
+
+    <img src="pictures/phone-control.gif" alt="Worst phone control ever" class="next">
+
+    <style>
+        #phone-control img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </section>
 
-<section class="slide" id="">
-    <h2>TODO: Custom Controls vs. Native Controls</h2>
+<section class="slide" id="native-wins">
+    <h2>Native Control <code>1 - 0</code> Custom Control</h2>
 
+    <img src="pictures/email-keyboard.jpg" alt="" class="cover">
+
+    <style>
+        #native-wins::after {
+            display: none;
+        }
+
+        #native-wins h2 {
+            text-align: center;
+        }
+
+        #native-wins img {
+            position: absolute;
+            bottom: -46%;
+            top: initial;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </section>
 
 <section class="slide" id="WWE">
@@ -390,12 +455,32 @@
     <h2>Инструменты проверки и автоматизации</h2>
 
     <ul>
-        <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb/related">Accessibility
+        <li>
+            <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb/related">Accessibility
                 Developer Tools (for Chrome)</a></li>
         <li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd">Axe Chrome
             extension</a></li>
         <li><a href="https://github.com/dequelabs/axe-core">Axe-Core for CIT</a></li>
     </ul>
+</section>
+
+<section class="slide" id="SEO">
+    <h2 class="shout">SEO FOR FREE</h2>
+
+    <img src="pictures/wow.jpg" alt="WOW PICTURE">
+
+    <style>
+        #SEO h2 {
+            z-index: 1;
+        }
+
+        #SEO img {
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+            width: 350px;
+        }
+    </style>
 </section>
 
 <section class="slide" id="audit">
@@ -432,16 +517,38 @@
     </ul>
 </section>
 
+<section class="slide" id="main-idea">
+    <h2 class="shout">Что хотел сказать автор?</h2>
+</section>
+
 <section class="slide" id="thanx">
     <h2>Accessibility</h2>
     <p>Алексеев Алексей, Exadel Inc.</p>
 
-    <ul>
-        <li><a href="https://twitter.com/NE05KY">@NE05KY</a></li>
-    </ul>
+    <p><a href="https://twitter.com/NE05KY">@NE05KY</a></p>
 
-    <p>Презентация: <a href="">TODO: link</a></p>
+    <p>Презентация: <a href="https://ne05ky.github.io/accessibility/">ne05ky.github.io/accessibility/</a></p>
 </section>
+
+<section class="slide" id="people">
+    <h2 class="shout">People</h2>
+</section>
+
+<section class="slide" id="prices">
+    <h2>Prices</h2>
+
+    <ul>
+        <li class="next">1 bedroom apartment - $1760 per month</li>
+        <li class="next">Whole foods market - $1200 per month</li>
+        <li class="next">Used car (2004-2008) - $3500-$4500</li>
+        <li class="next">Over 9000 entertainments</li>
+    </ul>
+</section>
+
+<section class="slide" id="miscellaneous">
+    <h2 class="shout">Miscellaneous</h2>
+</section>
+
 
 <div class="progress"></div>
 <script src="shower/shower.min.js"></script>
