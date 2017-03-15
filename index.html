@@ -260,7 +260,7 @@
 </section>
 
 <section class="slide" id="html-elements">
-    <h2 class="shout">!DOCTYPE</h2>
+    <h2 class="shout">130+ HTML Tags</h2>
 
     <script>
 		var elements = [
@@ -368,17 +368,13 @@
 			"&lt;var>",
 			"&lt;video>",
 			"&lt;wbr>"
-		]
-			, counter = 0;
-		function changeTitle()
-		{
-			setTimeout(function ()
-			{
+		];
+        (function changeTitle(){
+			setTimeout(function () {
 				document.querySelector("#html-elements h2").innerHTML = elements[parseInt(Math.random() * elements.length)];
 				changeTitle();
 			}, 200);
-		}
-		changeTitle();
+		})();
     </script>
 </section>
 
@@ -529,26 +525,6 @@
 
     <p>Презентация: <a href="https://ne05ky.github.io/accessibility/">ne05ky.github.io/accessibility/</a></p>
 </section>
-
-<section class="slide" id="people">
-    <h2 class="shout">People</h2>
-</section>
-
-<section class="slide" id="prices">
-    <h2>Prices</h2>
-
-    <ul>
-        <li class="next">1 bedroom apartment - $1760 per month</li>
-        <li class="next">Whole foods market - $1200 per month</li>
-        <li class="next">Used car (2004-2008) - $3500-$4500</li>
-        <li class="next">Over 9000 entertainments</li>
-    </ul>
-</section>
-
-<section class="slide" id="miscellaneous">
-    <h2 class="shout">Miscellaneous</h2>
-</section>
-
 
 <div class="progress"></div>
 <script src="shower/shower.min.js"></script>
